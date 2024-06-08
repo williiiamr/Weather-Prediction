@@ -1,6 +1,6 @@
 # Weather Prediction ☁️
 <div align="center">
-  <img src="https://github.com/williiiamr/ASL_Recoginition/blob/master/img/ASL_cover.png" alt="creditcard">
+  <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/weather.jpg" alt="creditcard">
 </div>
 
 ## Project Overview 📑
