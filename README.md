@@ -75,37 +75,31 @@ model = tf.keras.models.Sequential([
 ```
 
 ## Results ⭐
-Model is then used to predict test data to see how robust is it in learning the data. 
+After the model is finished training, the model is then used to predict test data to see how robust it is in learning the data. This process also allow us to asses its capability before using it in real world practices. 
 ### AVG TEMP
 <div align="center">
   <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/AVG_TEMP.png" alt="AVG TEMP", width='400'>
 </div>
+
 ### RAINFALL
 <div align="center">
   <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/RAINFALL.png" alt="RAINFALL", width='400'>
 </div>
+
 ### AVG WINDSPEED
 <div align="center">
   <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/WINDSPEED.png" alt="AVG WINDSPEED", width='400'>
 </div>
 
-
-
-Then using confusion matrix it is shown that the model is able to predict each class from test set accurately with only 1 missclassification.
-<div align="left">
-  <img src="https://github.com/williiiamr/ASL_Recoginition/blob/master/img/Confusion%20Matrix.png" alt="confusion matrix", width='550'>
-</div>
-
-
+From the graph above the model is able to predict correctly most of the time meaning the model is able to learn well and are ready to be used in real world applications.
 
 ## Conclusion 💾
-This project demonstrates the potential of machine learning in hand sign detection. The developed model can be a valuable tool to assist deaf people in communicating, learning, and performing various tasks more effectively.
+This project showcases the potential uses of machine learning in the realm of Weather Prediction. The developed model emerges as a potent asset, poised to empower companies in their endeavors to forecast weather patterns. By leveraging advanced machine learning techniques, this model furnishes decision-makers with invaluable insights, facilitating informed decision-making processes rooted in data-driven forecasts. While the model undoubtedly represents a significant stride forward, it is imperative to acknowledge its inherent imperfections and limitations. The writer harbors a fervent hope that through continued refinement and iterative improvement, this model will evolve into a more robust and reliable tool, further enhancing its utility and efficacy in addressing the intricate challenges of weather prediction.
 
 ## Suggestions 📎
-- Experiment with more complex model architectures and other transfer learning models.
+- Experiment with other algorithms to find the most suitable for the available data.
 - Collect more data to improve model performance.
-- Develop a real-time system to detect handsign using camera with bounding boxes.
-- Develop a more complex logic to stitch together the letters to make a word.
+- Develop a user friendly GUI to forecast next day weather using streamlit.
 
 ## Contributions 👨‍🔧
 Contributions are welcome! Please submit a pull request if you have any suggestions or improvements.
