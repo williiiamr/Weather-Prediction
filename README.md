@@ -14,6 +14,7 @@ The project uses Data from PT. GGP BMKG Weather station with 18 features and 4 y
 
 ## Data Preprocessing 🔗
 Before being ready for analysis, data must be preprocessed first. Data preprocessing refers to the processes of cleaning, normalization, splitting, and segmentation of data to improve its quality and make it suitable for analysis.
+<br>
 **Cleaning**
 In this section the data is inputed and then checked for any available missing value. if there are any missing value the model will use rolling mean to fill the value.
 ```
