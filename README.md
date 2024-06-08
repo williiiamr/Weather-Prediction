@@ -15,7 +15,7 @@ The project uses Data from PT. GGP BMKG Weather station with 18 features and 4 y
 ## Data Preprocessing 🔗
 Before being ready for analysis, data must be preprocessed first. Data preprocessing refers to the processes of cleaning, normalization, splitting, and segmentation of data to improve its quality and make it suitable for analysis.
 <br>
-#### Cleaning
+#### **Cleaning**
 In this section the data is inputed and then checked for any available missing value. if there are any missing value the model will use rolling mean to fill the value.
 ```
 df = pd.read_excel('/content/cuaca_fix.xlsx', dtype={'Tanggal':str} , parse_dates=False)
@@ -28,7 +28,7 @@ df.isna().sum()
 df.fillna(round(df.rolling(window=7, min_periods=1).mean(), 2), inplace=True)
 df.info()df.info()
 ```
-#### Splitting
+#### **Splitting**
 The next step is to split the data into 2 parts Training and Testing.
 ```
 length = round(len(df) * 0.8)
@@ -38,7 +38,7 @@ test = df[length:]
 print(f'Length of Training Data: {len(train)}')
 print(f'Length of Test Data: {len(test)}')
 ```
-#### Normalization
+#### **Normalization**
 After the data is splitted. Using Minmax scaler the data is then normalized into ranges of 0-1 for faster training and eliminating biases.
 ```
 scaler = MinMaxScaler()
@@ -47,7 +47,7 @@ train_scaled = scaler.transform(train)
 test_scaled = scaler.transform(test)
 ```
 
-#### Segmentation
+#### **Segmentation**
 Finally the data is grouped to ensure it meets the model's required format.
 ```
 length = 7
