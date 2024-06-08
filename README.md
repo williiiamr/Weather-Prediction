@@ -9,7 +9,7 @@ Currently, the climate conditions in Indonesia are becoming difficult to predict
 ## About The Dataset 📅
 The project uses Data from PT. GGP BMKG Weather station with 18 features and 4 years worth of data starting from early 2020 until the end of 2024. Before pipelining the data into model for training we need to first do feature selection as to only use the most relevant features for the model and not all 18 features. the features that will be used in this modeling are AVG_TEMP, RAINFALL, and AVG_WINDSPEED. 
 <div align="center">
-  <img src="https://github.com/williiiamr/ASL_Recoginition/blob/master/img/ASL_cover.png" alt="creditcard">
+  <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/dataset.png" alt="creditcard">
 </div>
 
 ## Data Preprocessing 🔗
