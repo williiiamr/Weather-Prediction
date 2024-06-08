@@ -61,12 +61,34 @@ validation_generator = TimeseriesGenerator(test_scaled,test_scaled,
                                            length=length, batch_size=16, shuffle=False)
 ```
 
+## GRU 🤖
+The next step is to create a Gated Recurrent Unit (GRU) model to train the weather data. In building the GRU model, tensorflow is utilized from the keras library.
+```
+model = tf.keras.models.Sequential([
+    tf.keras.layers.GRU(128, activation='relu', input_shape=(n_steps,n_features), return_sequences=True),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dropout(0.3),
+    tf.keras.layers.Dense(n_features)
+])
+```
 
 ## Results ⭐
-The loss and accuracy metrics from the training and validation data show excellent results, indicating that the model is improving with each epoch. This consistent learning demonstrates the effectiveness of the training process and suggests that the model is successfully capturing the underlying patterns in the data. 
-<div align="left">
-  <img src="https://github.com/williiiamr/ASL_Recoginition/blob/master/img/Loss_and_acc.png" alt="Loss n Acc", width='550'>
+Model is then used to predict test data to see how robust is it in learning the data. 
+### AVG TEMP
+<div align="center">
+  <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/AVG_TEMP.png" alt="AVG TEMP", width='400'>
 </div>
+### RAINFALL
+<div align="center">
+  <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/RAINFALL.png" alt="RAINFALL", width='400'>
+</div>
+### AVG WINDSPEED
+<div align="center">
+  <img src="https://github.com/williiiamr/Weather-Prediction/blob/master/img/WINDSPEED.png" alt="AVG WINDSPEED", width='400'>
+</div>
+
 
 
 Then using confusion matrix it is shown that the model is able to predict each class from test set accurately with only 1 missclassification.
